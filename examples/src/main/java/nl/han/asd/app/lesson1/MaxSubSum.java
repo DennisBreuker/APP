@@ -16,12 +16,23 @@ public class MaxSubSum {
 
     public static void main(String[] args) {
         for (int n = N_MIN; n <= N_MAX; n *= MULT_FACTOR) {
-            int[] list = createRandomFilledArray(n);
-            long start = System.currentTimeMillis();
-            maxSubSumN(list);
-            long stop = System.currentTimeMillis();
-            System.out.printf("%,10d\t%,10.3f\n", n, (stop - start) / 1000.0);
+            int[] list = createRandomFilledArrayOfLength(n);
+            double time = getTimeForMaxSubSumOf(list);
+            System.out.printf("%,10d\t%,10.3f\n", n, time);
         }
+    }
+
+    /**
+     * Measures the time for calculating the max sub som of a list of numbers
+     *
+     * @param list The list of numbers
+     * @return Time taken
+     */
+    private static double getTimeForMaxSubSumOf(int[] list) {
+        long start = System.currentTimeMillis();
+        maxSubSumN2(list);
+        long stop = System.currentTimeMillis();
+        return (stop - start) / 1000.0;
     }
 
     /**
@@ -31,7 +42,7 @@ public class MaxSubSum {
      * @param n The length of the array to be created
      * @return The array with random values
      */
-    private static int[] createRandomFilledArray(int n) {
+    private static int[] createRandomFilledArrayOfLength(int n) {
         int[] list = new int[n];
         Random rand = new Random();
         for (int i = 0; i < n; i++) {
