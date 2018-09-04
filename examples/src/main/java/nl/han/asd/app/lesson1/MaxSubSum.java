@@ -30,7 +30,7 @@ public class MaxSubSum {
      */
     private static double getTimeForMaxSubSumOf(int[] list) {
         long start = System.currentTimeMillis();
-        maxSubSumN2(list);
+        maxSubSumN(list);
         long stop = System.currentTimeMillis();
         return (stop - start) / 1000.0;
     }
