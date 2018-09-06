@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 public class HTree extends JFrame {
     public final static int WIDTH = 500;
     public final static int HEIGHT = 500;
-    public final static double FACTOR = 0.71f;
+    public final static double FACTOR = 1.0/Math.sqrt(2);
 
 
     public HTree() {
@@ -39,7 +39,7 @@ public class HTree extends JFrame {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        drawRecursive(g, 0, 0, Math.min(WIDTH, HEIGHT)/4, true, 3);
+        drawRecursive(g, 0, 0, Math.min(WIDTH, HEIGHT)/4, true, 10);
 
     }
 

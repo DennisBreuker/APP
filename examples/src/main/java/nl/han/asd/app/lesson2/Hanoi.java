@@ -1,7 +1,7 @@
 package nl.han.asd.app.lesson2;
 
 public class Hanoi {
-    private static final int AANTAL_SCHIJVEN = 3;
+    private static final int AANTAL_SCHIJVEN = 64;
     private static final int START = 1;
     private static final int VIA = 2;
     private static final int DOEL = 3;
