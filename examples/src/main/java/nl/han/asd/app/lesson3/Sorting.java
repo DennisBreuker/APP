@@ -10,14 +10,14 @@ public class Sorting {
 
         int[] list = {8, 6, 0, 7, 5, 3, 1};
         System.out.println("Before sorting");
-        printArray(list);
+        printInsertionSortArray(list, 0);
         System.out.println();
 
 //        insertionSort(list);
         mergeSort(list);
 
         System.out.println("\nAfter sorting");
-        printArray(list);
+        printInsertionSortArray(list,list.length);
     }
 
     public static void insertionSort(int[] a) {
@@ -32,14 +32,21 @@ public class Sorting {
 
             a[j] = toBeInserted;
             if (PRINT_STEPS) {
-                printArray(a);
+                printInsertionSortArray(a, i+1);
             }
         }
     }
 
-    public static void printArray(int[] a) {
-        for (int n : a) {
-            System.out.print(n + "\t");
+    public static void printInsertionSortArray(int[] a, int sortedCount) {
+        if (sortedCount != 0) {
+            System.out.print("[");
+        }
+        for (int i=0; i<a.length; i++) {
+            System.out.print(a[i]);
+            if (i == sortedCount-1) {
+                System.out.print("]");
+            }
+            System.out.print("\t");
         }
         System.out.println();
     }
@@ -75,7 +82,7 @@ public class Sorting {
             mergeSort(a, tmpArray, center + 1, right);
             merge(a, tmpArray, left, center + 1, right);
             if (PRINT_STEPS) {
-                printArray(a);
+                printMergedSortArray(a, left, right);
             }
         }
     }
@@ -122,5 +129,18 @@ public class Sorting {
         }
     }
 
+    public static void printMergedSortArray(int[] a, int left, int right) {
+        for (int i=0; i<a.length; i++) {
+            if (i == left) {
+                System.out.print("[");
+            }
+            System.out.print(a[i]);
+            if (i == right) {
+                System.out.print("]");
+            }
+            System.out.print("\t");
+        }
+        System.out.println();
+    }
 }
 
