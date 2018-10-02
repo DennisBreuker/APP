@@ -1,4 +1,4 @@
-package nl.han.asd.app.lesson1;
+package nl.han.asd.app.lesson_1_1_algoritme_analyse;
 
 import java.util.Random;
 

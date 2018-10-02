@@ -1,4 +1,4 @@
-package nl.han.asd.app.lesson3;
+package nl.han.asd.app.lesson_1_3_sorteeralgoritmes;
 
 import java.util.Random;
 

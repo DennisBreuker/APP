@@ -1,4 +1,4 @@
-package nl.han.asd.app.lesson2;
+package nl.han.asd.app.lesson_1_2_recursie;
 
 public class Hanoi {
     private static final int AANTAL_SCHIJVEN = 64;

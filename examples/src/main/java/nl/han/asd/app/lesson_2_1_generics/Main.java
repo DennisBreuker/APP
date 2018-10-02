@@ -1,6 +1,4 @@
-package nl.han.asd.app.lesson4;
-
-import java.io.File;
+package nl.han.asd.app.lesson_2_1_generics;
 
 public class Main {
     public static void main(String[] args) {

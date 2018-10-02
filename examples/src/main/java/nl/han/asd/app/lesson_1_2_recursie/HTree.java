@@ -1,4 +1,4 @@
-package nl.han.asd.app.lesson2;
+package nl.han.asd.app.lesson_1_2_recursie;
 
 import java.awt.Graphics;
 import javax.swing.JFrame;

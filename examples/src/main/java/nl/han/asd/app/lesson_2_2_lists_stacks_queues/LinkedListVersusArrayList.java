@@ -1,4 +1,4 @@
-package nl.han.asd.app.lesson5;
+package nl.han.asd.app.lesson_2_2_lists_stacks_queues;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -48,7 +48,7 @@ public class LinkedListVersusArrayList {
         System.out.printf("Insert at index 1 LinkedList: %4d ms\n", time);
         printLine();
 
-        // insert in first tenth (index i/10)
+        // insert in first tenth (index i/30)
         // ArrayList
         list = new ArrayList();
         time = msInsertAtOneThirtieth(N, list, TEKST);
@@ -57,6 +57,17 @@ public class LinkedListVersusArrayList {
         list = new LinkedList();
         time = msInsertAtOneThirtieth( N, list, TEKST);
         System.out.printf("Insert at one thirtieth (index i/30) LinkedList: %4d ms\n", time);
+        printLine();
+
+        // insert in first tenth (index 29/30)
+        // ArrayList
+        list = new ArrayList();
+        time = msInsertAtTwentyNineThirtieth(N, list, TEKST);
+        System.out.printf("Insert at one thirtieth (index i*29/30) ArrayList : %4d ms\n", time);
+        // LinkedList
+        list = new LinkedList();
+        time = msInsertAtTwentyNineThirtieth( N, list, TEKST);
+        System.out.printf("Insert at one thirtieth (index i*29/30) LinkedList: %4d ms\n", time);
         printLine();
 
         // insert in the middle (index i/2)
@@ -165,6 +176,14 @@ public class LinkedListVersusArrayList {
         return stop - start;
     }
 
+    private static long msInsertAtTwentyNineThirtieth(final int N, List<String> list, final String TEKST) {
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < N; i++) {
+            list.add((int)(i*29.0/30), TEKST);
+        }
+        long stop = System.currentTimeMillis();
+        return stop - start;
+    }
     private static long msInsertInTheMiddle(final int N, List<String> list, final String TEKST) {
         long start = System.currentTimeMillis();
         for (int i = 0; i < N; i++) {
@@ -176,7 +195,6 @@ public class LinkedListVersusArrayList {
 
     private static long msInsertAtNearEnd(final int N, List<String> list, final String TEKST) {
         long start = System.currentTimeMillis();
-        list.add(TEKST); // this one separate
         for (int i = 1; i < N; i++) {
             list.add(i-1, TEKST);
         }

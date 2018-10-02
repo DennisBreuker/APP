@@ -1,4 +1,4 @@
-package nl.han.asd.app.lesson4;
+package nl.han.asd.app.lesson_2_1_generics;
 
 public class MemoryCell<T> {
 
