@@ -11,7 +11,8 @@ public class ConfigurationReader extends ConfigurationBaseListener {
 
     @Override
     public void exitProperty(ConfigurationParser.PropertyContext cxt) {
-        properties.put(cxt.getChild(0).getText(), cxt.getChild(2).getText());
+        properties.put(cxt.getChild(0).getText(),
+                cxt.getChild(2).getText());
     }
     public HashMap<String, String> getProperties() {
         return properties;

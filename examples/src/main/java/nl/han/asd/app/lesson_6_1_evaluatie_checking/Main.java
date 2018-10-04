@@ -9,6 +9,7 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -21,12 +22,24 @@ public class Main {
         // Get tree
         ParseTree tree = parser.properties();
 
-        // Walk through tree using ConfigurationReader
+        // Example 1: Walk through tree using ConfigurationReader
         ParseTreeWalker walker = new ParseTreeWalker();
         ConfigurationReader reader = new ConfigurationReader();
         walker.walk(reader, tree);
 
         // Show the collected key-value pairs
+        System.out.print("Output using Listener: ");
         System.out.println(reader.getProperties().toString());
+        // End of example 1
+
+        // Example 2: Visit tree using ConfigurationReaderVisitor
+        ConfigurationReaderVisitor visitor = new ConfigurationReaderVisitor();
+        HashMap<String,String> props = visitor.visit(tree);
+
+        // Show the collected key-value pairs
+        System.out.print("Output using Visitor: ");
+        System.out.println(props);
+        // End of example 2
+
     }
 }
