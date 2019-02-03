@@ -61,16 +61,18 @@ public class MaxSubSum {
     private static int maxSubSumN3(int[] a) {
         int maxSum = 0;
 
-        for (int i = 0; i < a.length; i++)
-            for (int j = i; j < a.length; j++) {
+        for (int first = 0; first < a.length; first++) {
+            for (int last = first; last < a.length; last++) {
                 int thisSum = 0;
 
-                for (int k = i; k <= j; k++)
-                    thisSum += a[k];
+                for (int i = first; i <= last; i++)
+                    thisSum += a[i];
 
-                if (thisSum > maxSum)
+                if (thisSum > maxSum) {
                     maxSum = thisSum;
+                }
             }
+        }
 
         return maxSum;
     }
@@ -85,13 +87,14 @@ public class MaxSubSum {
     private static int maxSubSumN2(int[] a) {
         int maxSum = 0;
 
-        for (int i = 0; i < a.length; i++) {
+        for (int first = 0; first < a.length; first++) {
             int thisSum = 0;
-            for (int j = i; j < a.length; j++) {
-                thisSum += a[j];
+            for (int i = first; i < a.length; i++) {
+                thisSum += a[i];
 
-                if (thisSum > maxSum)
+                if (thisSum > maxSum) {
                     maxSum = thisSum;
+                }
             }
         }
 
@@ -106,15 +109,17 @@ public class MaxSubSum {
      * @return The maximum contiguous sum
      */
     private static int maxSubSumN(int[] a) {
-        int maxSum = 0, thisSum = 0;
+        int maxSum = 0;
+        int thisSum = 0;
 
-        for (int j = 0; j < a.length; j++) {
-            thisSum += a[j];
+        for (int i = 0; i < a.length; i++) {
+            thisSum += a[i];
 
-            if (thisSum > maxSum)
+            if (thisSum > maxSum) {
                 maxSum = thisSum;
-            else if (thisSum < 0)
+            } else if (thisSum < 0) {
                 thisSum = 0;
+            }
         }
 
         return maxSum;
