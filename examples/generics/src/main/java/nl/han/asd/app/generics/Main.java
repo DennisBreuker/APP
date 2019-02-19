@@ -1,4 +1,4 @@
-package nl.han.asd.app.lesson_2_1_generics;
+package nl.han.asd.app.generics;
 
 public class Main {
     public static void main(String[] args) {

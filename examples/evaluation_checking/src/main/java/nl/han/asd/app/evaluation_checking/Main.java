@@ -1,4 +1,4 @@
-package nl.han.asd.app.lesson_6_1_evaluatie_checking;
+package nl.han.asd.app.evaluation_checking;
 
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
