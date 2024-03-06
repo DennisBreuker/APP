@@ -21,25 +21,26 @@ public class Main {
 
         // Get tree
         ParseTree tree = parser.properties();
+        System.out.println(tree.toStringTree(parser));
 
-        // Example 1: Walk through tree using ConfigurationReader
-        ParseTreeWalker walker = new ParseTreeWalker();
-        ConfigurationReader reader = new ConfigurationReader();
-        walker.walk(reader, tree);
+//        // Example 1: Walk through tree using ConfigurationReader
+//        ParseTreeWalker walker = new ParseTreeWalker();
+//        ConfigurationReader reader = new ConfigurationReader();
+//        walker.walk(reader, tree);
+//
+//        // Show the collected key-value pairs
+//        System.out.print("Output using Listener: ");
+//        System.out.println(reader.getProperties().toString());
+//        // End of example 1
 
-        // Show the collected key-value pairs
-        System.out.print("Output using Listener: ");
-        System.out.println(reader.getProperties().toString());
-        // End of example 1
-
-        // Example 2: Visit tree using ConfigurationReaderVisitor
-        ConfigurationReaderVisitor visitor = new ConfigurationReaderVisitor();
-        HashMap<String,String> props = visitor.visit(tree);
-
-        // Show the collected key-value pairs
-        System.out.print("Output using Visitor: ");
-        System.out.println(props);
-        // End of example 2
+//        // Example 2: Visit tree using ConfigurationReaderVisitor
+//        ConfigurationReaderVisitor visitor = new ConfigurationReaderVisitor();
+//        HashMap<String,String> props = visitor.visit(tree);
+//
+//        // Show the collected key-value pairs
+//        System.out.print("Output using Visitor: ");
+//        System.out.println(props);
+//        // End of example 2
 
     }
 }
