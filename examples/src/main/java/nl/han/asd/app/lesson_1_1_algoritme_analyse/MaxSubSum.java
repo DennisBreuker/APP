@@ -29,10 +29,10 @@ public class MaxSubSum {
      * @return Time taken
      */
     private static double getTimeForMaxSubSumOf(int[] list) {
-        long start = System.currentTimeMillis();
-        maxSubSumN(list);
-        long stop = System.currentTimeMillis();
-        return (stop - start) / 1000.0;
+        long start = System.nanoTime();
+        maxSubSumN3(list);
+        long stop = System.nanoTime();
+        return (stop - start) / 1000000000.0;
     }
 
     /**
