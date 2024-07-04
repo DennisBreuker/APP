@@ -1,4 +1,4 @@
-package nl.han.asd.app.lesson_6_1_evaluatie_checking;
+package nl.han.asd.app.lesson_6_1_evaluatie_checking_configuration_part_2;
 
 import java.util.HashMap;
 

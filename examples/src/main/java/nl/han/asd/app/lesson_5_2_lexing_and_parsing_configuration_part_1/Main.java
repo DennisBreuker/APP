@@ -1,4 +1,4 @@
-package nl.han.asd.app.lesson_5_2_lexing_and_parsing;
+package nl.han.asd.app.lesson_5_2_lexing_and_parsing_configuration_part_1;
 
 
 import org.antlr.v4.runtime.CharStream;
