@@ -1,3 +1,3 @@
 # README
 
-This is my personal repo containing examples from the APP lessons at HAN ICA.
+This is my personal repo containing examples from the APP lessons at HAN HBO-ICT.
