@@ -3,10 +3,10 @@ package nl.han.asd.app.lesson_6_1_evaluatie_checking;
 import java.util.HashMap;
 
 public class ConfigurationReader extends ConfigurationBaseListener {
-    private HashMap<String,String> properties;
+    private final HashMap<String,String> properties;
 
     public ConfigurationReader() {
-        properties = new HashMap<String,String>();
+        properties = new HashMap<>();
     }
 
 //    @Override

@@ -7,7 +7,6 @@ import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -32,7 +31,7 @@ public class Main {
 //        System.out.print("Output using Listener: ");
 //        System.out.println(reader.getProperties().toString());
 //        // End of example 1
-
+//
 //        // Example 2: Visit tree using ConfigurationReaderVisitor
 //        ConfigurationReaderVisitor visitor = new ConfigurationReaderVisitor();
 //        HashMap<String,String> props = visitor.visit(tree);
