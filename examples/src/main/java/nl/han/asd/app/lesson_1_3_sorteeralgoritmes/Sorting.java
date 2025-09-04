@@ -84,6 +84,8 @@ public class Sorting {
             if (PRINT_STEPS) {
                 printMergedSortArray(a, left, right);
             }
+        } else if (PRINT_STEPS) {
+            printMergedSortArray(a, left, right);
         }
     }
 
